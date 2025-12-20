@@ -1,8 +1,37 @@
-# TIA Openness Manager v1.0.1 - Release Notes
+# TIA Openness Manager - Changelog
 
-**Release Date:** 2025-12-18
+## v1.1.1 (2025-12-20)
 
-## Bug Fixes
+### New Features
+- **Clear Code Button** - New button to clear the code editor content
+- **Clear Results Button** - New button to clear Find Unused results
+- **Auto-Clear on Project Close** - Code editor and Find Unused results are automatically cleared when project is closed
+
+### Bug Fixes
+- **Instance DBs marked as unused** - FindUnused now correctly detects Instance DB references from FB calls (prevents false positives)
+- **ObjectDisposedException after detach** - Fixed stale facade reference when detaching from attached TIA Portal instance
+
+### Improvements
+- **Import Progress Display** - Progress label now shows current file name being imported
+- **About Dialog** - Added clickable GitHub link for easy access to the repository
+- **Third-Party Licenses** - Added AutoUpdater.NET to the licenses list in About dialog and THIRD_PARTY_NOTICES.txt
+
+---
+
+## v1.1.0 (2025-12-20)
+
+### New Features
+- **Auto-Update Check** - Application now checks for updates at startup and notifies when a new version is available
+- **Update Settings** - New checkbox in Settings to enable/disable automatic update checks
+
+### Bug Fixes
+- **Progress bar not fully filled** - Progress bar now shows 100% when operations complete (Analysis, Export, HMI Export)
+
+---
+
+## v1.0.1 (2025-12-18)
+
+### Bug Fixes
 
 - **Checkbox state lost during search/filter** - Checkboxes in left and right tree now persist when filtering or searching multiple times
 - **Selection count incorrect with filter** - Import/Export selection count now correctly reflects checked items even when filter is active
