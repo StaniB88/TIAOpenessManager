@@ -1,5 +1,12 @@
 # TIA Openness Manager - Changelog
 
+## v1.1.3 (2025-12-20)
+
+### Bug Fixes
+- **Auto-Update not working** - Added missing AutoUpdater.NET.dll to installer package (update feature was broken since v1.1.0)
+
+---
+
 ## v1.1.2 (2025-12-20)
 
 ### Bug Fixes
