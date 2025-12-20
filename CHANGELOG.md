@@ -1,5 +1,12 @@
 # TIA Openness Manager - Changelog
 
+## v1.1.2 (2025-12-20)
+
+### Bug Fixes
+- **FindUnused false positives on some machines** - Removed debug code that caused XML parsing to fail silently on machines without a specific folder structure
+
+---
+
 ## v1.1.1 (2025-12-20)
 
 ### New Features
