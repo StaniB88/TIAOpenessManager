@@ -1,5 +1,13 @@
 # TIA Openness Manager - Changelog
 
+## v1.1.4 (2025-12-21)
+
+### Improvements
+- **Simplified Activation** - Enter your activation code received via email to unlock Pro/Enterprise features
+- **Free Basic Tier** - Basic tier is now permanently free (no trial expiration)
+
+---
+
 ## v1.1.3 (2025-12-20)
 
 ### Bug Fixes
