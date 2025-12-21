@@ -1,5 +1,11 @@
 # TIA Openness Manager - Changelog
 
+## v1.1.5 (2025-12-21)
+
+### Bug Fixes
+- **Language Switching Fixed** - Language switching now works correctly in the installed version
+  - Added missing language satellite assemblies to installer
+  
 ## v1.1.4 (2025-12-21)
 
 ### Improvements

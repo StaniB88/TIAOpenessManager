@@ -556,31 +556,43 @@ When Debug Logging is enabled, detailed logs are created:
 
 ### License Tiers
 
-| Feature | Trial | Basic | Pro | Enterprise |
-|---------|-------|-------|-----|------------|
-| Duration | 5 days | Unlimited | Unlimited | Unlimited |
-| Files | 1 | 200 | 1,000 | Unlimited |
-| Export/Import | Yes | Yes | Yes | Yes |
-| Find Unused | Yes | Yes | Yes | Yes |
-| Compare | Yes | Yes | Yes | Yes |
-| Protection Profiles | No | No | Yes | Yes |
-| MCP Server | No | No | Yes | Yes |
-| Multi-User | No | No | No | Yes |
+| Feature | Basic (FREE) | Pro (€25/mo) | Enterprise (€50/mo) |
+|---------|--------------|--------------|---------------------|
+| Price | Free forever | €25/mo or €250/year | €50/mo or €500/year |
+| Files | 1 | 1,000 | Unlimited |
+| Export/Import | Yes | Yes | Yes |
+| Block Compare | Yes | Yes | Yes |
+| Code Editor | Yes | Yes | Yes |
+| Find Unused | No | Yes | Yes |
+| Safety Blocks | No | Yes | Yes |
+| Protection Profiles | No | Yes | Yes |
+| MCP Server | No | Yes | Yes |
+| Multi-User | No | No | Yes |
 
-### Activate License
+### Activate License (Online)
 
-1. Click **License** in the toolbar
-2. Click **Activate License**
-3. Enter your license key
-4. Click **Activate**
+1. Purchase a subscription (Pro or Enterprise)
+2. You will receive an activation code via email
+3. Click **License** in the toolbar
+4. Enter the activation code
+5. Click **Activate**
+6. The license will be bound to your hardware
+
+### Manage Subscription
+
+- Click **Manage Subscription** in the License dialog
+- Opens the Stripe portal for:
+  - Changing payment method
+  - Downloading invoices
+  - Canceling subscription
 
 ### View License Information
 
 In the License dialog, you can see:
-- Current license type
-- Remaining days (for Trial)
-- Activation date
-- Machine ID
+- Current license type (Basic/Pro/Enterprise)
+- Current period expiry date
+- Hardware ID
+- Activation code
 
 ---
 

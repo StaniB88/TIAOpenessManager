@@ -556,31 +556,43 @@ Bei aktiviertem Debug Logging werden detaillierte Logs erstellt:
 
 ### Lizenz-Tiers
 
-| Feature | Trial | Basic | Pro | Enterprise |
-|---------|-------|-------|-----|------------|
-| Dauer | 5 Tage | Unbegrenzt | Unbegrenzt | Unbegrenzt |
-| Dateien | 1 | 200 | 1.000 | Unbegrenzt |
-| Export/Import | Ja | Ja | Ja | Ja |
-| Find Unused | Ja | Ja | Ja | Ja |
-| Compare | Ja | Ja | Ja | Ja |
-| Protection Profiles | Nein | Nein | Ja | Ja |
-| MCP Server | Nein | Nein | Ja | Ja |
-| Multi-User | Nein | Nein | Nein | Ja |
+| Feature | Basic (GRATIS) | Pro (€25/Mo) | Enterprise (€50/Mo) |
+|---------|----------------|--------------|---------------------|
+| Preis | Kostenlos | €25/Mo oder €250/Jahr | €50/Mo oder €500/Jahr |
+| Dateien | 1 | 1.000 | Unbegrenzt |
+| Export/Import | Ja | Ja | Ja |
+| Block Compare | Ja | Ja | Ja |
+| Code Editor | Ja | Ja | Ja |
+| Find Unused | Nein | Ja | Ja |
+| Safety Blocks | Nein | Ja | Ja |
+| Protection Profiles | Nein | Ja | Ja |
+| MCP Server | Nein | Ja | Ja |
+| Multi-User | Nein | Nein | Ja |
 
-### Lizenz aktivieren
+### Lizenz aktivieren (Online)
 
-1. Klicken Sie auf **License** in der Toolbar
-2. Klicken Sie auf **Activate License**
-3. Geben Sie Ihren Lizenzschlüssel ein
-4. Klicken Sie auf **Activate**
+1. Kaufen Sie eine Subscription (Pro oder Enterprise)
+2. Sie erhalten einen Aktivierungscode per E-Mail
+3. Klicken Sie auf **License** in der Toolbar
+4. Geben Sie den Aktivierungscode ein
+5. Klicken Sie auf **Activate**
+6. Die Lizenz wird an Ihre Hardware gebunden
+
+### Subscription verwalten
+
+- Klicken Sie auf **Manage Subscription** im License-Dialog
+- Öffnet das Stripe-Portal für:
+  - Zahlungsmethode ändern
+  - Rechnungen herunterladen
+  - Subscription kündigen
 
 ### Lizenz-Information anzeigen
 
 Im License-Dialog sehen Sie:
-- Aktueller Lizenz-Typ
-- Verbleibende Tage (bei Trial)
-- Aktivierungsdatum
-- Maschinenkennung
+- Aktueller Lizenz-Typ (Basic/Pro/Enterprise)
+- Ablaufdatum der aktuellen Periode
+- Hardware-ID
+- Aktivierungscode
 
 ---
 

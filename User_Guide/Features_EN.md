@@ -130,34 +130,47 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 
 ## License Options
 
-### Trial (5 Days)
-- All features available
-- 1 file export/import limit
-- Ideal for testing
-
-### Basic
-- 200 files export/import
-- All block types
-- Find Unused Blocks
+### Basic (FREE)
+- **Free forever** - No trial period, no expiration
+- 1 file export/import
 - Block Compare
+- Code Editor
+- Hardware Overview
 
-### Professional
-- 1,000 files export/import
-- Everything in Basic
+### Professional (€25/month or €250/year)
+- **1,000 files** export/import
+- Everything in Basic, plus:
+- Find Unused Blocks
+- Safety Block Support (F_FB, F_FC, F_DB, F_OB)
 - Protection Profiles
-- MCP Server Integration
+- MCP Server Integration (AI/Claude)
 - Priority Support
 
-### Enterprise
-- Unlimited files
+### Enterprise (€50/month or €500/year)
+- **Unlimited files**
 - Everything in Professional
 - Multi-user licenses
 - Dedicated support
 - Volume discounts
 
+---
+
+## Activation
+
+### Online Activation
+1. Purchase subscription at: https://github.com/StaniB88/TIAOpenessManager/releases
+2. Receive activation code via email
+3. Enter code in the program under "License" → "Activate"
+4. License is bound to your hardware
+
+### Manage Subscription
+- Click "Manage Subscription" in the License dialog
+- Opens Stripe portal for payments, invoices, and cancellation
+
+---
 
 - **Multi-language** - German, English, French, Italian
 
 ---
 
-**Contact:** For licensing and questions, contact us at [TIAOpenessManager@outlook.com]
+**Contact:** For questions, contact us at [TIAOpenessManager@outlook.com]
