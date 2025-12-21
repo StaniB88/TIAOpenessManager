@@ -3,7 +3,7 @@
 **Streamline Your Siemens TIA Portal Workflow**
 
 [![Website](https://img.shields.io/badge/Website-tiaopenessmanager.netlify.app-blue)](https://tiaopenessmanager.netlify.app/)
-[![Version](https://img.shields.io/badge/Version-1.1.4-green)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-1.1.5-green)](CHANGELOG.md)
 [![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V18%20|%20V19%20|%20V20-orange)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-lightgrey)]()
 
@@ -87,8 +87,7 @@ TIA Openness Manager is a powerful tool for Siemens TIA Portal developers that r
 
 ## Installation
 
-1. Download the latest installer from [Releases](https://github.com/StaniB88/TIAOpenessManager/releases) or directly:
-   - [`TiaOpennessManager_Setup_v1.1.4.exe`](TiaOpennessManager_Setup_v1.1.4.exe)
+1. Download the latest installer from [Releases](https://github.com/StaniB88/TIAOpenessManager/releases)
 
 2. Run the installer and follow the setup wizard
 
