@@ -1,5 +1,10 @@
 # TIA Openness Manager - Changelog
 
+## v1.1.6 (2025-12-22)
+
+### New Features
+- **7-Day Full Trial** - New users get a 7-day trial with ALL features unlocked (Enterprise-level)
+
 ## v1.1.5 (2025-12-21)
 
 ### Bug Fixes
