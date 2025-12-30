@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-    <version>1.1.6</version>
-    <url>https://github.com/StaniB88/TIAOpenessManager/releases/download/v1.1.6/TiaOpennessManager_Setup_v1.1.6.exe</url>
+    <version>1.1.7</version>
+    <url>https://github.com/StaniB88/TIAOpenessManager/releases/download/v1.1.7/TiaOpennessManager_Setup_v1.1.7.exe</url>
     <changelog>https://github.com/StaniB88/TIAOpenessManager/blob/main/CHANGELOG.md</changelog>
     <mandatory>false</mandatory>
 </item>
