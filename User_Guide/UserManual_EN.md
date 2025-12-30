@@ -235,6 +235,31 @@ The toolbar above the right tree provides options to customize import and export
 
 These options help resolve common import issues and customize export behavior for version control.
 
+**S7DCL Export Options (TIA Portal V20+ only):**
+
+The S7DCL (SIMATIC 7 Declaration Language) export feature provides additional text-based exports alongside the standard XML and source code files.
+
+| Option | Description | Export Result |
+|--------|-------------|---------------|
+| SCL + S7DCL | Additionally export SCL blocks as S7DCL format | `.xml` + `.scl` + `.s7dcl` |
+| AWL + S7DCL | Additionally export AWL/STL blocks as S7DCL format | `.xml` + `.awl` + `.s7dcl` |
+| LAD/FBD + S7DCL | Additionally export LAD/FBD/GRAPH blocks as S7DCL format | `.xml` + `.s7dcl` |
+
+**Why use S7DCL export?**
+- **Better readability:** Text-based format ideal for code review
+- **Version control:** Perfect for diff comparison in Git/SVN
+- **Multi-format:** Keep both standard formats AND S7DCL for maximum compatibility
+- **Graphical languages:** Enables text export for LAD/FBD blocks (normally only XML)
+
+**Important Notes:**
+- S7DCL files (`.s7dcl`) are **export-only** - they **cannot be re-imported** into TIA Portal
+- The checkboxes enable **additional** exports, not replacements - you always get the standard formats
+- For LAD/FBD blocks, S7DCL provides a text representation that would otherwise not exist
+- S7DCL export requires TIA Portal V20 or higher
+
+**Access S7DCL Settings:**
+Click the **gear icon** (⚙) in the toolbar above the right tree to open Import/Export Settings.
+
 ### Preview Diff
 
 The Preview Diff function shows differences between the TIA Portal project and the Working Directory:

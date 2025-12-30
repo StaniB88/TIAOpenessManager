@@ -13,6 +13,7 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 - **Bulk Export** - Exportieren Sie hunderte Blöcke mit einem Klick
 - **Selektiver Export** - Wählen Sie genau die Blöcke, die Sie benötigen
 - **XML & SCL Support** - Vollständige Unterstützung für Simatic ML und SCL-Dateien
+- **S7DCL Export (V20+)** - Zusätzliches textbasiertes Export-Format (.s7dcl) für bessere Versionskontrolle
 - **Ordnerstruktur-Erhaltung** - Die TIA Portal Ordnerstruktur wird beibehalten
 - **Automatische Kompilierung** - Kompiliert und speichert automatisch nach Import
 - **Konfigurierbare Ordnernamen** - Passen Sie Export-Ordnernamen an (Source, Blocks, Tags, etc.)
@@ -99,6 +100,7 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 | TIA Portal V18 | Vollständig unterstützt |
 | TIA Portal V19 | Vollständig unterstützt |
 | TIA Portal V20 | Vollständig unterstützt |
+| TIA Portal V21 | Vollständig unterstützt |
 
 ---
 
