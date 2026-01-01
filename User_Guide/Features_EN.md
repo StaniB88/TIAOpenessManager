@@ -82,7 +82,7 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 
 ### AI Integration (MCP Server)
 
-- **Model Context Protocol** - Integration with Claude and other AI assistants
+- **Model Context Protocol** - Integration with any MCP-compatible AI assistant
 - **Project Context** - AI has access to your project structure
 - **Code Generation** - AI can generate SCL source code for blocks
 - **DB Generation** - AI can create Data Blocks with Simatic ML templates
@@ -146,7 +146,7 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 - Find Unused Blocks
 - Safety Block Support (F_FB, F_FC, F_DB, F_OB)
 - Protection Profiles
-- MCP Server Integration (AI/Claude)
+- MCP Server Integration
 - Priority Support
 
 ### Enterprise (€40/month or €400/year)

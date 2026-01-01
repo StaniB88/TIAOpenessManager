@@ -82,7 +82,7 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 
 ### KI-Integration (MCP Server)
 
-- **Model Context Protocol** - Integration mit Claude und anderen KI-Assistenten
+- **Model Context Protocol** - Integration mit jedem MCP-kompatiblen KI-Assistenten
 - **Projekt-Kontext** - KI hat Zugriff auf Ihre Projektstruktur
 - **Code-Generierung** - KI kann SCL-Quellcode für Bausteine generieren
 - **DB-Generierung** - KI kann Datenbausteine mit Simatic ML-Vorlagen erstellen
@@ -146,7 +146,7 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 - Find Unused Blocks
 - Safety Block Support (F_FB, F_FC, F_DB, F_OB)
 - Protection Profiles
-- MCP Server Integration (KI/Claude)
+- MCP Server Integration
 - Priority Support
 
 ### Enterprise (€40/Monat oder €400/Jahr)

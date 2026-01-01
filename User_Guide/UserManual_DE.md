@@ -393,7 +393,7 @@ Profile speichern Ihre Schutz-Konfiguration:
 
 ### Was ist MCP?
 
-Das Model Context Protocol (MCP) ermöglicht KI-Assistenten wie Claude, auf Ihr TIA Portal Projekt zuzugreifen.
+Das Model Context Protocol (MCP) ermöglicht KI-Assistenten, auf Ihr TIA Portal Projekt zuzugreifen.
 
 ### MCP Server Status
 
@@ -402,11 +402,11 @@ Der Tab zeigt:
 - **Verbundene Clients:** Anzahl aktiver Verbindungen
 - **Verfügbare Tools:** Liste der MCP-Funktionen
 
-### Verwendung mit Claude
+### Verwendung mit KI-Assistenten
 
 1. Starten Sie den MCP Server im TIA Openness Manager
-2. Konfigurieren Sie Claude mit der MCP-Server-Adresse
-3. Claude kann nun:
+2. Konfigurieren Sie Ihren KI-Assistenten mit der MCP-Server-Adresse
+3. Der KI-Assistent kann nun:
    - Projektstruktur abfragen
    - Block-Code lesen
    - Analysen durchführen

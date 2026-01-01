@@ -27,6 +27,8 @@ TIA Openness Manager is a powerful tool for Siemens TIA Portal developers that r
 ### Import & Export
 - **Bulk Operations** - Export/import hundreds of blocks at once
 - **XML & SCL Support** - Full support for Simatic ML and SCL files
+- **SPL Export (V20+)** - Export as SIMATIC Source Documents
+- **Configurable Settings** - Import/Export options dialog
 - **Folder Structure** - TIA Portal folder hierarchy is preserved
 - **Auto Compile & Save** - Automatic compilation after import
 
@@ -59,7 +61,7 @@ TIA Openness Manager is a powerful tool for Siemens TIA Portal developers that r
 - **CSV Export** - Document your hardware configuration
 
 ### AI Integration (MCP Server)
-- **Claude Integration** - Connect with Claude AI assistant
+- **MCP Support** - Connect with any MCP-compatible AI assistant
 - **Code Generation** - AI generates SCL blocks, DBs, UDTs
 - **Auto Import** - Generated code imports directly into TIA Portal
 - **Project Context** - AI understands your project structure
@@ -73,6 +75,7 @@ TIA Openness Manager is a powerful tool for Siemens TIA Portal developers that r
 | V18 | Fully Supported |
 | V19 | Fully Supported |
 | V20 | Fully Supported |
+| V21 | Planned |
 
 ---
 
@@ -94,6 +97,8 @@ TIA Openness Manager is a powerful tool for Siemens TIA Portal developers that r
 3. Launch TIA Openness Manager from the Start Menu
 
 4. Connect to your TIA Portal project (Open or Attach)
+
+**Free Trial:** New users get a 7-day trial with all features unlocked.
 
 
 ## Quick Start
