@@ -2,8 +2,8 @@
 
 **Streamline Your Siemens TIA Portal Workflow**
 
-[![Website](https://img.shields.io/badge/Website-tiaopenessmanager.netlify.app-blue)](https://tiaopenessmanager.netlify.app/)
-[![Version](https://img.shields.io/badge/Version-1.2.0-green)](CHANGELOG.md)
+[![Website](https://img.shields.io/badge/Website-tiaopenessmanager.ch-blue)](https://tiaopenessmanager.ch/)
+[![Version](https://img.shields.io/badge/Version-1.2.1-green)](CHANGELOG.md)
 [![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V18%20|%20V19%20|%20V20-orange)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-lightgrey)]()
 
@@ -134,7 +134,7 @@ TIA Openness Manager includes automatic update checking. When a new version is a
 
 ## Support
 
-- **Website:** [tiaopenessmanager.netlify.app](https://tiaopenessmanager.netlify.app/)
+- **Website:** [tiaopenessmanager.ch](https://tiaopenessmanager.ch/)
 - **Email:** TIAOpenessManager@outlook.com
 - **Issues:** [GitHub Issues](https://github.com/StaniB88/TIAOpenessManager/issues)
 
@@ -163,8 +163,22 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
 
 ## Disclaimer
 
+**The software is provided "as is" without warranty of any kind.**
+
+The provider assumes no liability for:
+- Damages caused by faulty LLM outputs or AI-generated code
+- Data loss, production downtime, or system failures
+- Engineering errors or faulty code generation
+- Damages caused by improper use or configuration
+
+**The user bears full responsibility for reviewing and validating all generated content before use in production systems.**
+
 This software uses the official Siemens TIA Portal Openness API. Siemens and TIA Portal are registered trademarks of Siemens AG.
 
+See [EULA](https://www.tiaopenessmanager.ch/eula) and [Terms](https://www.tiaopenessmanager.ch/agb) for full legal details.
+
 ---
+
+**© 2025 AnyAutomation. All rights reserved.**
 
 **Made with passion for the automation community**

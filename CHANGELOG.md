@@ -1,5 +1,18 @@
 # TIA Openness Manager - Changelog
 
+## v1.2.1 (2026-01-01)
+
+### New Features
+- **Legal Document Access** - Quick access to Privacy Policy and EULA directly from the About Window
+- **Website Link** - Clickable website link in About Window opens [tiaopenessmanager.ch](https://tiaopenessmanager.ch)
+
+### Bug Fixes
+- **Find Unused** - Fixed incorrect detection of Instance DBs
+
+### Improvements
+- About Window redesigned with action buttons for better usability
+- Updated User Guides with latest documentation 
+
 ## v1.2.0 (2025-12-30)
 
 Various bugfixes, performance optimizations, and stability improvements.

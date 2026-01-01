@@ -5,14 +5,14 @@
 - **Betriebssystem:** Windows 10/11 (64-bit)
 - **TIA Portal:** Version 18, 19 oder 20 installiert
 - **.NET Framework:** 4.8 oder höher
-- **Arbeitsspeicher:** Mindestens 8 GB RAM empfohlen
-- **Festplatte:** 100 MB für die Anwendung
+- **Arbeitsspeicher:** Mindestens 4 GB RAM (8 GB empfohlen)
+- **Festplatte:** 500 MB für die Anwendung
 
 ## Installation
 
 1. Entpacken Sie das TiaOpennessManager-Archiv in einen Ordner Ihrer Wahl
 2. Starten Sie `TiaOpennessManager.exe`
-3. Beim ersten Start wird automatisch eine 5-tägige Testlizenz aktiviert
+3. Beim ersten Start wird automatisch eine 7-tägige Testlizenz aktiviert
 
 > **Hinweis:** TIA Portal muss installiert sein, aber muss nicht geöffnet sein.
 
@@ -75,4 +75,12 @@ Es gibt zwei Möglichkeiten, ein Projekt zu öffnen:
 
 ---
 
+## Haftungsausschluss
+
+Die Software wird „as is" geliefert. Der Anbieter übernimmt keine Haftung für Schäden. Der Anwender trägt die volle Verantwortung für die Prüfung aller Inhalte. Siehe EULA auf https://www.tiaopenessmanager.ch
+
+---
+
 **Support:** Bei Fragen wenden Sie sich an den Support oder konsultieren Sie das ausführliche Benutzerhandbuch.
+
+**© 2025 AnyAutomation.**

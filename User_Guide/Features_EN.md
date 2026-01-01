@@ -100,7 +100,7 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 | TIA Portal V18 | Fully supported |
 | TIA Portal V19 | Fully supported |
 | TIA Portal V20 | Fully supported |
-| TIA Portal V21 | Fully supported |
+| TIA Portal V21 | Future |
 
 ---
 
@@ -141,6 +141,7 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 
 ### Professional (€25/month or €250/year)
 - **1,000 files** export/import
+- **Annual plan saves 17%** (2 months free)
 - Everything in Basic, plus:
 - Find Unused Blocks
 - Safety Block Support (F_FB, F_FC, F_DB, F_OB)
@@ -148,8 +149,9 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 - MCP Server Integration (AI/Claude)
 - Priority Support
 
-### Enterprise (€50/month or €500/year)
+### Enterprise (€40/month or €400/year)
 - **Unlimited files**
+- **Annual plan saves 17%** (2 months free)
 - Everything in Professional
 - Multi-user licenses
 - Dedicated support
@@ -160,7 +162,7 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 ## Activation
 
 ### Online Activation
-1. Purchase subscription at: https://github.com/StaniB88/TIAOpenessManager/releases
+1. Purchase subscription at: https://www.tiaopenessmanager.ch
 2. Receive activation code via email
 3. Enter code in the program under "License" → "Activate"
 4. License is bound to your hardware
@@ -175,4 +177,12 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 
 ---
 
-**Contact:** For questions, contact us at [TIAOpenessManager@outlook.com]
+## Disclaimer
+
+The software is provided "as is". The provider assumes no liability for damages caused by use. The user bears full responsibility for reviewing all generated content. See EULA at https://www.tiaopenessmanager.ch
+
+---
+
+**Contact:** For questions, contact us at [tiaopenessmanager@outlook.com]
+
+**© 2025 AnyAutomation. All rights reserved.**

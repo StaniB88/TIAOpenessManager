@@ -46,10 +46,10 @@ Der TIA Openness Manager ist eine Desktop-Anwendung, die die Siemens TIA Portal 
 | Komponente | Anforderung |
 |------------|-------------|
 | Betriebssystem | Windows 10/11 (64-bit) |
-| TIA Portal | V18, V19 oder V20 |
+| TIA Portal | V18, V19, V20 oder V21 |
 | .NET Framework | 4.8 oder höher |
-| RAM | Mindestens 8 GB |
-| Festplatte | 100 MB |
+| RAM | Mindestens 4 GB (8 GB empfohlen) |
+| Festplatte | 500 MB |
 
 ### Installation
 
@@ -581,9 +581,9 @@ Bei aktiviertem Debug Logging werden detaillierte Logs erstellt:
 
 ### Lizenz-Tiers
 
-| Feature | Basic (GRATIS) | Pro (€25/Mo) | Enterprise (€50/Mo) |
+| Feature | Basic (GRATIS) | Pro (€25/Mo) | Enterprise (€40/Mo) |
 |---------|----------------|--------------|---------------------|
-| Preis | Kostenlos | €25/Mo oder €250/Jahr | €50/Mo oder €500/Jahr |
+| Preis | Kostenlos | €25/Mo oder €250/Jahr | €40/Mo oder €400/Jahr |
 | Dateien | 1 | 1.000 | Unbegrenzt |
 | Export/Import | Ja | Ja | Ja |
 | Block Compare | Ja | Ja | Ja |
@@ -602,6 +602,15 @@ Bei aktiviertem Debug Logging werden detaillierte Logs erstellt:
 4. Geben Sie den Aktivierungscode ein
 5. Klicken Sie auf **Activate**
 6. Die Lizenz wird an Ihre Hardware gebunden
+
+**Wichtig:** Die Software validiert die Lizenz alle 7 Tage online. Bei fehlender Internetverbindung kann die Software **bis zu 14 Tage offline** genutzt werden. Nach 14 Tagen ist eine erneute Online-Validierung erforderlich.
+
+### Hardware-Bindung
+
+Jede Lizenz ist an eine eindeutige Hardware-ID gebunden, die generiert wird aus:
+- CPU-ID (Prozessor-Seriennummer)
+- Mainboard-Seriennummer
+- Primäre MAC-Adresse
 
 ### Subscription verwalten
 
@@ -680,9 +689,25 @@ A: Nein, aktuell wird nur ein Projekt gleichzeitig unterstützt.
 
 Bei weiteren Fragen oder Problemen kontaktieren Sie den Support:
 
-- **E-Mail:** [TIAOpenessManager@outlook.com]
+- **E-Mail:** [tiaopenessmanager@outlook.com]
 - **Dokumentation:** Siehe `Information/` Ordner
 
 ---
+
+## Haftungsausschluss
+
+Die Software wird „as is" geliefert. Der Anbieter übernimmt keine Haftung für:
+- Schäden durch fehlerhafte LLM-Ausgaben
+- Datenverlust oder Produktionsausfälle
+- Engineering-Fehler oder fehlerhafte Code-Generierung
+- Schäden durch unsachgemäße Nutzung
+
+**Der Anwender trägt die volle Verantwortung für die Prüfung und Validierung aller generierten Inhalte.**
+
+Siehe EULA und Haftungsausschluss auf https://www.tiaopenessmanager.ch für Details.
+
+---
+
+**© 2025 AnyAutomation. Alle Rechte vorbehalten.**
 
 **Ende des Benutzerhandbuchs**

@@ -100,7 +100,7 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 | TIA Portal V18 | Vollständig unterstützt |
 | TIA Portal V19 | Vollständig unterstützt |
 | TIA Portal V20 | Vollständig unterstützt |
-| TIA Portal V21 | Vollständig unterstützt |
+| TIA Portal V21 | Geplant |
 
 ---
 
@@ -141,6 +141,7 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 
 ### Professional (€25/Monat oder €250/Jahr)
 - **1.000 Dateien** Export/Import
+- **Jahresabo spart 17%** (2 Monate gratis)
 - Alles aus Basic, plus:
 - Find Unused Blocks
 - Safety Block Support (F_FB, F_FC, F_DB, F_OB)
@@ -148,8 +149,9 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 - MCP Server Integration (KI/Claude)
 - Priority Support
 
-### Enterprise (€50/Monat oder €500/Jahr)
+### Enterprise (€40/Monat oder €400/Jahr)
 - **Unbegrenzte Dateien**
+- **Jahresabo spart 17%** (2 Monate gratis)
 - Alles aus Professional
 - Multi-User Lizenzen
 - Dedizierter Support
@@ -160,7 +162,7 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 ## Aktivierung
 
 ### Online-Aktivierung
-1. Subscription kaufen unter: https://github.com/StaniB88/TIAOpenessManager/releases
+1. Subscription kaufen unter: https://www.tiaopenessmanager.ch
 2. Aktivierungscode per E-Mail erhalten
 3. Code im Programm eingeben unter "License" → "Activate"
 4. Lizenz ist an Ihre Hardware gebunden
@@ -175,4 +177,12 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 
 ---
 
-**Kontakt:** Für Fragen kontaktieren Sie uns unter [TIAOpenessManager@outlook.com]
+## Haftungsausschluss
+
+Die Software wird „as is" geliefert. Der Anbieter übernimmt keine Haftung für Schäden, die durch die Nutzung entstehen. Der Anwender trägt die volle Verantwortung für die Prüfung aller generierten Inhalte. Siehe EULA auf https://www.tiaopenessmanager.ch
+
+---
+
+**Kontakt:** Für Fragen kontaktieren Sie uns unter [tiaopenessmanager@outlook.com]
+
+**© 2025 AnyAutomation. Alle Rechte vorbehalten.**

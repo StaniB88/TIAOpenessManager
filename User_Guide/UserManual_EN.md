@@ -46,10 +46,10 @@ TIA Openness Manager is a desktop application that uses the Siemens TIA Portal O
 | Component | Requirement |
 |-----------|-------------|
 | Operating System | Windows 10/11 (64-bit) |
-| TIA Portal | V18, V19, or V20 |
+| TIA Portal | V18, V19, V20, or V21 |
 | .NET Framework | 4.8 or higher |
-| RAM | Minimum 8 GB |
-| Disk Space | 100 MB |
+| RAM | Minimum 4 GB (8 GB recommended) |
+| Disk Space | 500 MB |
 
 ### Installation
 
@@ -581,9 +581,9 @@ When Debug Logging is enabled, detailed logs are created:
 
 ### License Tiers
 
-| Feature | Basic (FREE) | Pro (€25/mo) | Enterprise (€50/mo) |
+| Feature | Basic (FREE) | Pro (€25/mo) | Enterprise (€40/mo) |
 |---------|--------------|--------------|---------------------|
-| Price | Free forever | €25/mo or €250/year | €50/mo or €500/year |
+| Price | Free forever | €25/mo or €250/year | €40/mo or €400/year |
 | Files | 1 | 1,000 | Unlimited |
 | Export/Import | Yes | Yes | Yes |
 | Block Compare | Yes | Yes | Yes |
@@ -602,6 +602,15 @@ When Debug Logging is enabled, detailed logs are created:
 4. Enter the activation code
 5. Click **Activate**
 6. The license will be bound to your hardware
+
+**Important:** The software validates the license every 7 days online. If no internet connection is available, the software can be used **offline for up to 14 days**. After 14 days, a new online validation is required.
+
+### Hardware Binding
+
+Each license is bound to a unique hardware ID generated from:
+- CPU ID (Processor Serial Number)
+- Motherboard Serial Number
+- Primary MAC Address
 
 ### Manage Subscription
 
@@ -680,9 +689,25 @@ A: No, currently only one project at a time is supported.
 
 For further questions or problems, contact support:
 
-- **Email:** [TIAOpenessManager@outlook.com]
+- **Email:** [tiaopenessmanager@outlook.com]
 - **Documentation:** See `Information/` folder
 
 ---
+
+## Disclaimer
+
+The software is provided "as is". The provider assumes no liability for:
+- Damages caused by faulty LLM outputs
+- Data loss or production downtime
+- Engineering errors or faulty code generation
+- Damages caused by improper use
+
+**The user bears full responsibility for reviewing and validating all generated content.**
+
+See EULA and Disclaimer at https://www.tiaopenessmanager.ch for details.
+
+---
+
+**© 2025 AnyAutomation. All rights reserved.**
 
 **End of User Manual**
