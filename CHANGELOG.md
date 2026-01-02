@@ -1,5 +1,12 @@
 # TIA Openness Manager - Changelog
 
+## v1.2.2 (2026-01-02)
+
+### Bug Fixes
+- **Remove V21 from Settings** - Removed TIA Portal V21 option from API version dropdown to prevent crashes (V21 support not yet stable)
+
+---
+
 ## v1.2.1 (2026-01-01)
 
 ### New Features
