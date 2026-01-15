@@ -4,7 +4,7 @@
 
 [![Website](https://img.shields.io/badge/Website-tiaopenessmanager.ch-blue)](https://tiaopenessmanager.ch/)
 [![Version](https://img.shields.io/badge/Version-1.2.3-green)](CHANGELOG.md)
-[![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V18%20|%20V19%20|%20V20-orange)]()
+[![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V15--V20-orange)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-lightgrey)]()
 
 ---
@@ -72,6 +72,9 @@ TIA Openness Manager is a powerful tool for Siemens TIA Portal developers that r
 
 | TIA Portal Version | Status |
 |-------------------|--------|
+| V15 | Fully Supported |
+| V16 | Fully Supported |
+| V17 | Fully Supported |
 | V18 | Fully Supported |
 | V19 | Fully Supported |
 | V20 | Fully Supported |
@@ -83,7 +86,7 @@ TIA Openness Manager is a powerful tool for Siemens TIA Portal developers that r
 
 - **OS:** Windows 10/11 (64-bit)
 - **.NET Framework:** 4.8
-- **TIA Portal:** V18, V19, or V20 installed
+- **TIA Portal:** V15, V16, V17, V18, V19, or V20 installed
 - **Permissions:** TIA Portal Openness API access configured
 
 ---
