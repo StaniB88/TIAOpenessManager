@@ -1,5 +1,23 @@
 # TIA Openness Manager - Changelog
 
+## v1.2.3 (2026-01-15)
+
+### New Features
+- **Improved UI Responsiveness** - The application stays responsive during long operations
+- **Auto-Detect TIA Version** - No longer need to manually select TIA Portal version in settings
+- **Extended Attach Support** - Can now attach to TIA Portal V15, V16, V17, and V21 (previously only V18-V20)
+
+### Improvements
+- **Faster Import All** - Performance optimizations for large imports
+- **Better Safety Block Detection** - Improved recognition of Safety tag tables
+- **Cleaner About Window** - Simplified design
+
+### Bug Fixes
+- **Fixed Long Path Crash** - Protected against Windows MAX_PATH limitations
+- **Fixed Protection Errors** - Resolved path conflicts during protection operations
+
+---
+
 ## v1.2.2 (2026-01-02)
 
 ### Bug Fixes

@@ -3,7 +3,7 @@
 ## System Requirements
 
 - **Operating System:** Windows 10/11 (64-bit)
-- **TIA Portal:** Version 18, 19, or 20 installed
+- **TIA Portal:** Version 15, 16, 17, 18, 19, 20, or 21 installed
 - **.NET Framework:** 4.8 or higher
 - **Memory:** Minimum 4 GB RAM (8 GB recommended)
 - **Disk Space:** 500 MB for the application
@@ -24,8 +24,10 @@ There are two ways to open a project:
 
 **Option A: Open New Project**
 1. Click **Open Project**
-2. Navigate to your `.ap18`/`.ap19`/`.ap20` project file
+2. Navigate to your TIA Portal project file (`.ap15`, `.ap16`, `.ap17`, `.ap18`, `.ap19`, `.ap20`, `.apx`)
 3. Select the file and click **Open**
+
+> **Note:** The TIA Portal version is detected automatically from your project file.
 
 **Option B: Attach to Running TIA Portal**
 1. Open your project in TIA Portal
@@ -83,4 +85,4 @@ The software is provided "as is". The provider assumes no liability for damages.
 
 **Support:** For questions, contact support or consult the detailed User Manual.
 
-**© 2025 AnyAutomation.**
+**© 2026 AnyAutomation.**

@@ -1,7 +1,7 @@
 # TIA Openness Manager - User Manual
 
-**Version:** 1.0
-**Date:** December 2025
+**Version:** 1.2
+**Date:** January 2026
 
 ---
 
@@ -46,10 +46,12 @@ TIA Openness Manager is a desktop application that uses the Siemens TIA Portal O
 | Component | Requirement |
 |-----------|-------------|
 | Operating System | Windows 10/11 (64-bit) |
-| TIA Portal | V18, V19, V20, or V21 |
+| TIA Portal | V15, V16, V17, V18, V19, or V20 |
 | .NET Framework | 4.8 or higher |
 | RAM | Minimum 4 GB (8 GB recommended) |
 | Disk Space | 500 MB |
+
+> **Note:** TIA Portal version is detected automatically when you open a project or connect to a running instance. No manual configuration required.
 
 ### Installation
 
@@ -113,8 +115,10 @@ The application is divided into several areas:
 ### Open Project (Headless Mode)
 
 1. Click **Open Project**
-2. Navigate to the project file (`.ap18`, `.ap19`, `.ap20`)
+2. Navigate to your TIA Portal project file (`.ap15`, `.ap16`, `.ap17`, `.ap18`, `.ap19`, `.ap20`, `.apx`)
 3. Click **Open**
+
+The TIA Portal version is detected automatically from the project file extension.
 
 Headless Mode starts TIA Portal in the background without a visible user interface. This is faster for pure export/import operations.
 
@@ -215,50 +219,59 @@ The Right Directory is the folder on your file system where exported XML files a
 
 **Important:** Import overwrites existing blocks with the same name!
 
-### Import/Export Options
+### Import/Export Settings
 
-The toolbar above the right tree provides options to customize import and export behavior:
+Click the **gear icon** (⚙) in the toolbar to open the Import/Export Settings dialog. This dialog lets you customize how blocks are imported and exported.
 
-**Import Options:**
+#### Import Options
 
-| Option | Description |
-|--------|-------------|
-| Ignore Structural Changes | Ignores structure modifications when importing |
-| Ignore Missing References | Continues import even if referenced objects are missing |
+These settings control how blocks are imported into your TIA Portal project:
 
-**Export Options:**
+| Option | What it does |
+|--------|--------------|
+| **Ignore Structural Changes** | Import blocks even if their internal structure has changed since the last export. Useful when the block interface is the same but internal implementation differs. |
+| **Ignore Missing References** | Continue importing when some referenced blocks don't exist in the project yet. Helpful when importing blocks in stages. |
+| **Fault Tolerant Import** | If one block fails to import, continue importing the rest. Recommended for large imports where you want to maximize successful imports. |
 
-| Option | Description |
-|--------|-------------|
-| Export With Defaults | Includes default values in the exported XML |
-| Export With Read Only | Marks exported blocks as read-only |
+#### Export Options
 
-These options help resolve common import issues and customize export behavior for version control.
+These settings control how blocks are exported:
 
-**S7DCL Export Options (TIA Portal V20+ only):**
+| Option | What it does |
+|--------|--------------|
+| **Export With Defaults** | Include default parameter values in the exported files. Useful for complete documentation. |
+| **Export With ReadOnly** | Include read-only properties in exports. |
 
-The S7DCL (SIMATIC 7 Declaration Language) export feature provides additional text-based exports alongside the standard XML and source code files.
+#### SPL Export Options (V20 and later only)
 
-| Option | Description | Export Result |
-|--------|-------------|---------------|
-| SCL + S7DCL | Additionally export SCL blocks as S7DCL format | `.xml` + `.scl` + `.s7dcl` |
-| AWL + S7DCL | Additionally export AWL/STL blocks as S7DCL format | `.xml` + `.awl` + `.s7dcl` |
-| LAD/FBD + S7DCL | Additionally export LAD/FBD/GRAPH blocks as S7DCL format | `.xml` + `.s7dcl` |
+SPL (SIMATIC Programming Language) files are text-based source documents that are easier to read and compare than XML.
 
-**Why use S7DCL export?**
-- **Better readability:** Text-based format ideal for code review
-- **Version control:** Perfect for diff comparison in Git/SVN
-- **Multi-format:** Keep both standard formats AND S7DCL for maximum compatibility
-- **Graphical languages:** Enables text export for LAD/FBD blocks (normally only XML)
+| Option | What it does |
+|--------|--------------|
+| **Export SCL As SPL** | Save SCL blocks as text-based source documents (`.spl` files) |
+| **Export AWL As SPL** | Save AWL/STL blocks as text-based source documents |
+| **Export LAD/FBD As SPL** | Save graphic programming blocks (LAD, FBD, GRAPH) as text-based documents |
 
-**Important Notes:**
-- S7DCL files (`.s7dcl`) are **export-only** - they **cannot be re-imported** into TIA Portal
-- The checkboxes enable **additional** exports, not replacements - you always get the standard formats
-- For LAD/FBD blocks, S7DCL provides a text representation that would otherwise not exist
-- S7DCL export requires TIA Portal V20 or higher
+**Why use SPL export?**
+- **Better readability** - SPL files are plain text, making them easy to read in any text editor
+- **Version control** - See exactly what changed between versions in Git or SVN
+- **Code review** - Easier to review changes line by line
 
-**Access S7DCL Settings:**
-Click the **gear icon** (⚙) in the toolbar above the right tree to open Import/Export Settings.
+> **Note:** SPL files are for viewing and version control only. They cannot be re-imported into TIA Portal. This option requires TIA Portal V20 or later.
+
+#### Version Control Options
+
+These settings help create cleaner exports for Git, SVN, or other version control systems. They remove data that changes even when the actual code hasn't changed.
+
+| Option | What it does |
+|--------|--------------|
+| **Exclude Document Info** | Remove metadata that changes with every export |
+| **Normalize Timestamps** | Set all dates to a fixed value (January 1, 2000), so unchanged blocks show no differences |
+| **Clear Installed Products** | Remove machine-specific information from exports |
+| **Remove Object List** | Strip internal tracking data from code blocks |
+| **Normalize Whitespace** | Ensure consistent text formatting |
+
+> **Tip:** If you use Git or SVN, enable all Version Control options. This prevents "false changes" where files look different but the actual code is unchanged.
 
 ### Preview Diff
 
@@ -538,12 +551,13 @@ Click the **Gear icon** in the upper right corner.
 
 | Setting | Description |
 |---------|-------------|
-| Working Directory | Default export folder for Find Unused Blocks |
-| Language | User interface language (EN, DE, FR, IT) |
-| TIA Portal Version | Select V18, V19, or V20 API |
-| Theme | Color scheme (only Dark Theme available) |
-| Debug Logging | Enables extended logging |
-| Log Path | Path for log files |
+| **Language** | User interface language (English, German, French, Italian). Requires restart to take effect. |
+| **Working Directory** | Default folder for "Find Unused Blocks" exports |
+| **Log Path** | Where to save log files when Debug Logging is enabled |
+| **Debug Logging** | Enable detailed logging for troubleshooting |
+| **Auto-Update Check** | Automatically check for new versions when the application starts |
+
+> **Note:** TIA Portal version is now detected automatically when you open a project or connect to a running instance. No manual selection is needed.
 
 ### Folder Name Customization
 
@@ -636,11 +650,11 @@ In the License dialog, you can see:
 
 #### "TIA Portal not found"
 
-**Cause:** TIA Portal is not installed or wrong version.
+**Cause:** TIA Portal is not installed or compatible version not available.
 
 **Solution:**
-1. Check if TIA Portal V18, V19, or V20 is installed
-2. Make sure the Openness components are installed
+1. Check that TIA Portal V15, V16, V17, V18, V19, or V20 is installed
+2. Make sure the Openness components are installed (part of TIA Portal installation)
 
 #### "Access denied" when opening
 
@@ -708,6 +722,6 @@ See EULA and Disclaimer at https://www.tiaopenessmanager.ch for details.
 
 ---
 
-**© 2025 AnyAutomation. All rights reserved.**
+**© 2026 AnyAutomation. All rights reserved.**
 
 **End of User Manual**

@@ -1,7 +1,7 @@
 # TIA Openness Manager - Benutzerhandbuch
 
-**Version:** 1.0
-**Stand:** Dezember 2025
+**Version:** 1.2
+**Stand:** Januar 2026
 
 ---
 
@@ -46,10 +46,12 @@ Der TIA Openness Manager ist eine Desktop-Anwendung, die die Siemens TIA Portal 
 | Komponente | Anforderung |
 |------------|-------------|
 | Betriebssystem | Windows 10/11 (64-bit) |
-| TIA Portal | V18, V19, V20 oder V21 |
+| TIA Portal | V15, V16, V17, V18, V19 oder V20 |
 | .NET Framework | 4.8 oder höher |
 | RAM | Mindestens 4 GB (8 GB empfohlen) |
 | Festplatte | 500 MB |
+
+> **Hinweis:** Die TIA Portal Version wird automatisch erkannt, wenn Sie ein Projekt öffnen oder sich mit einer laufenden Instanz verbinden. Keine manuelle Konfiguration erforderlich.
 
 ### Installation
 
@@ -113,8 +115,10 @@ Die Anwendung ist in mehrere Bereiche unterteilt:
 ### Projekt öffnen (Headless Mode)
 
 1. Klicken Sie auf **Open Project**
-2. Navigieren Sie zur Projektdatei (`.ap18`, `.ap19`, `.ap20`)
+2. Navigieren Sie zu Ihrer TIA Portal Projektdatei (`.ap15`, `.ap16`, `.ap17`, `.ap18`, `.ap19`, `.ap20`, `.apx`)
 3. Klicken Sie auf **Öffnen**
+
+Die TIA Portal Version wird automatisch aus der Projektdatei-Erweiterung erkannt.
 
 Der Headless Mode startet TIA Portal im Hintergrund ohne sichtbare Benutzeroberfläche. Dies ist schneller für reine Export/Import-Operationen.
 
@@ -215,50 +219,59 @@ Das Right Directory ist der Ordner auf Ihrem Dateisystem, in dem exportierte XML
 
 **Wichtig:** Der Import überschreibt bestehende Blöcke mit gleichem Namen!
 
-### Import/Export Optionen
+### Import/Export-Einstellungen
 
-Die Toolbar über dem rechten Baum bietet Optionen zur Anpassung des Import- und Exportverhaltens:
+Klicken Sie auf das **Zahnrad-Symbol** (⚙) in der Toolbar, um den Dialog für Import/Export-Einstellungen zu öffnen. Dieser Dialog ermöglicht die Anpassung des Import- und Export-Verhaltens.
 
-**Import-Optionen:**
+#### Import-Optionen
 
-| Option | Beschreibung |
-|--------|--------------|
-| Ignore Structural Changes | Ignoriert Strukturänderungen beim Import |
-| Ignore Missing References | Setzt Import fort, auch wenn referenzierte Objekte fehlen |
+Diese Einstellungen steuern, wie Blöcke in Ihr TIA Portal Projekt importiert werden:
 
-**Export-Optionen:**
+| Option | Was es bewirkt |
+|--------|----------------|
+| **Ignore Structural Changes** | Importiert Blöcke auch wenn sich ihre interne Struktur seit dem letzten Export geändert hat. Nützlich wenn die Block-Schnittstelle gleich ist, aber die interne Implementierung abweicht. |
+| **Ignore Missing References** | Setzt den Import fort, wenn einige referenzierte Blöcke noch nicht im Projekt existieren. Hilfreich beim schrittweisen Import von Blöcken. |
+| **Fault Tolerant Import** | Wenn ein Block nicht importiert werden kann, wird mit dem Rest fortgefahren. Empfohlen für große Imports, um die erfolgreichen Imports zu maximieren. |
 
-| Option | Beschreibung |
-|--------|--------------|
-| Export With Defaults | Inkludiert Standardwerte in der exportierten XML |
-| Export With Read Only | Markiert exportierte Blöcke als schreibgeschützt |
+#### Export-Optionen
 
-Diese Optionen helfen bei häufigen Import-Problemen und passen das Export-Verhalten für Versionskontrolle an.
+Diese Einstellungen steuern, wie Blöcke exportiert werden:
 
-**S7DCL Export-Optionen (nur TIA Portal V20+):**
+| Option | Was es bewirkt |
+|--------|----------------|
+| **Export With Defaults** | Standardparameterwerte in den exportierten Dateien einschließen. Nützlich für vollständige Dokumentation. |
+| **Export With ReadOnly** | Schreibgeschützte Eigenschaften in Exporte einschließen. |
 
-Die S7DCL (SIMATIC 7 Declaration Language) Export-Funktion bietet zusätzliche textbasierte Exporte neben den Standard-XML- und Quellcode-Dateien.
+#### SPL Export-Optionen (nur V20 und später)
 
-| Option | Beschreibung | Export-Ergebnis |
-|--------|--------------|-----------------|
-| SCL + S7DCL | SCL-Blöcke zusätzlich als S7DCL-Format exportieren | `.xml` + `.scl` + `.s7dcl` |
-| AWL + S7DCL | AWL/STL-Blöcke zusätzlich als S7DCL-Format exportieren | `.xml` + `.awl` + `.s7dcl` |
-| LAD/FBD + S7DCL | LAD/FBD/GRAPH-Blöcke zusätzlich als S7DCL-Format exportieren | `.xml` + `.s7dcl` |
+SPL (SIMATIC Programming Language) Dateien sind textbasierte Quelldokumente, die einfacher zu lesen und zu vergleichen sind als XML.
 
-**Warum S7DCL Export verwenden?**
-- **Bessere Lesbarkeit:** Textbasiertes Format ideal für Code-Review
-- **Versionskontrolle:** Perfekt für Diff-Vergleiche in Git/SVN
-- **Mehrfachformat:** Behalte sowohl Standardformate ALS AUCH S7DCL für maximale Kompatibilität
-- **Grafische Sprachen:** Ermöglicht Textexport für LAD/FBD-Blöcke (normalerweise nur XML)
+| Option | Was es bewirkt |
+|--------|----------------|
+| **Export SCL As SPL** | SCL-Blöcke als textbasierte Quelldokumente (`.spl` Dateien) speichern |
+| **Export AWL As SPL** | AWL/STL-Blöcke als textbasierte Quelldokumente speichern |
+| **Export LAD/FBD As SPL** | Grafische Programmierblöcke (LAD, FBD, GRAPH) als textbasierte Dokumente speichern |
 
-**Wichtige Hinweise:**
-- S7DCL-Dateien (`.s7dcl`) sind **nur Export** - sie **können NICHT** in TIA Portal re-importiert werden
-- Die Checkboxen aktivieren **zusätzliche** Exporte, keine Ersetzungen - du erhältst immer die Standardformate
-- Für LAD/FBD-Blöcke bietet S7DCL eine Textdarstellung, die sonst nicht existieren würde
-- S7DCL Export erfordert TIA Portal V20 oder höher
+**Warum SPL Export verwenden?**
+- **Bessere Lesbarkeit** - SPL-Dateien sind reiner Text, leicht lesbar in jedem Text-Editor
+- **Versionskontrolle** - Sehen Sie genau, was sich zwischen Versionen in Git oder SVN geändert hat
+- **Code-Review** - Einfacher, Änderungen Zeile für Zeile zu überprüfen
 
-**Zugriff auf S7DCL-Einstellungen:**
-Klicken Sie auf das **Zahnrad-Symbol** (⚙) in der Toolbar über dem rechten Baum, um die Import/Export-Einstellungen zu öffnen.
+> **Hinweis:** SPL-Dateien dienen nur zur Ansicht und Versionskontrolle. Sie können nicht zurück in TIA Portal importiert werden. Diese Option erfordert TIA Portal V20 oder später.
+
+#### Versionskontroll-Optionen
+
+Diese Einstellungen helfen, sauberere Exporte für Git, SVN oder andere Versionskontrollsysteme zu erstellen. Sie entfernen Daten, die sich ändern, auch wenn sich der eigentliche Code nicht geändert hat.
+
+| Option | Was es bewirkt |
+|--------|----------------|
+| **Exclude Document Info** | Metadaten entfernen, die sich bei jedem Export ändern |
+| **Normalize Timestamps** | Alle Datumsangaben auf einen festen Wert setzen (1. Januar 2000), damit unveränderte Blöcke keine Unterschiede zeigen |
+| **Clear Installed Products** | Maschinenspezifische Informationen aus Exporten entfernen |
+| **Remove Object List** | Interne Tracking-Daten aus Code-Blöcken entfernen |
+| **Normalize Whitespace** | Konsistente Textformatierung sicherstellen |
+
+> **Tipp:** Wenn Sie Git oder SVN verwenden, aktivieren Sie alle Versionskontroll-Optionen. Dies verhindert "falsche Änderungen", bei denen Dateien unterschiedlich aussehen, obwohl sich der tatsächliche Code nicht geändert hat.
 
 ### Preview Diff
 
@@ -538,12 +551,13 @@ Klicken Sie auf das **Zahnrad-Symbol** in der oberen rechten Ecke.
 
 | Einstellung | Beschreibung |
 |-------------|--------------|
-| Working Directory | Standard-Exportordner für Find Unused Blocks |
-| Language | Sprache der Benutzeroberfläche (DE, EN, FR, IT) |
-| TIA Portal Version | Auswahl V18, V19 oder V20 API |
-| Theme | Farbschema (nur Dark Theme verfügbar) |
-| Debug Logging | Aktiviert erweiterte Protokollierung |
-| Log Path | Pfad für Log-Dateien |
+| **Language** | Sprache der Benutzeroberfläche (Deutsch, Englisch, Französisch, Italienisch). Erfordert Neustart. |
+| **Working Directory** | Standardordner für "Find Unused Blocks" Exporte |
+| **Log Path** | Speicherort für Log-Dateien wenn Debug Logging aktiviert ist |
+| **Debug Logging** | Aktiviert detaillierte Protokollierung für Fehlerbehebung |
+| **Auto-Update Check** | Automatisch beim Programmstart nach neuen Versionen suchen |
+
+> **Hinweis:** Die TIA Portal Version wird jetzt automatisch erkannt, wenn Sie ein Projekt öffnen oder sich mit einer laufenden Instanz verbinden. Eine manuelle Auswahl ist nicht mehr erforderlich.
 
 ### Ordnernamen-Anpassung
 
@@ -636,11 +650,11 @@ Im License-Dialog sehen Sie:
 
 #### "TIA Portal wird nicht gefunden"
 
-**Ursache:** TIA Portal ist nicht installiert oder die falsche Version.
+**Ursache:** TIA Portal ist nicht installiert oder keine kompatible Version verfügbar.
 
 **Lösung:**
-1. Prüfen Sie, ob TIA Portal V18, V19 oder V20 installiert ist
-2. Stellen Sie sicher, dass die Openness-Komponenten installiert sind
+1. Prüfen Sie, ob TIA Portal V15, V16, V17, V18, V19 oder V20 installiert ist
+2. Stellen Sie sicher, dass die Openness-Komponenten installiert sind (Teil der TIA Portal Installation)
 
 #### "Access denied" beim Öffnen
 
@@ -708,6 +722,6 @@ Siehe EULA und Haftungsausschluss auf https://www.tiaopenessmanager.ch für Deta
 
 ---
 
-**© 2025 AnyAutomation. Alle Rechte vorbehalten.**
+**© 2026 AnyAutomation. Alle Rechte vorbehalten.**
 
 **Ende des Benutzerhandbuchs**
