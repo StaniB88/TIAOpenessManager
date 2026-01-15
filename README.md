@@ -3,17 +3,9 @@
 **Streamline Your Siemens TIA Portal Workflow**
 
 [![Website](https://img.shields.io/badge/Website-tiaopenessmanager.ch-blue)](https://tiaopenessmanager.ch/)
-[![Version](https://img.shields.io/badge/Version-Coming%20Soon-yellow)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-1.2.3-green)](CHANGELOG.md)
 [![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V18%20|%20V19%20|%20V20-orange)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-lightgrey)]()
-
----
-
-## 🚧 New Release Coming Soon!
-
-**We are currently working on an exciting new release with new features and improvements.**
-
-Stay tuned for updates!
 
 ---
 
