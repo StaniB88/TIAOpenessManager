@@ -5,7 +5,7 @@
 ### New Features
 - **Improved UI Responsiveness** - The application stays responsive during long operations
 - **Auto-Detect TIA Version** - No longer need to manually select TIA Portal version in settings
-- **Extended Attach Support** - Can now attach to TIA Portal V15, V16, V17, and V21 (previously only V18-V20)
+- **Extended Attach Support** - Can now attach to TIA Portal (V15-V20)
 
 ### Improvements
 - **Faster Import All** - Performance optimizations for large imports
