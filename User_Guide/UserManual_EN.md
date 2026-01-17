@@ -49,7 +49,7 @@ TIA Openness Manager is a desktop application that uses the Siemens TIA Portal O
 | TIA Portal | V15, V16, V17, V18, V19, or V20 |
 | .NET Framework | 4.8 or higher |
 | RAM | Minimum 4 GB (8 GB recommended) |
-| Disk Space | 500 MB |
+| Disk Space | 50 MB |
 
 > **Note:** TIA Portal version is detected automatically when you open a project or connect to a running instance. No manual configuration required.
 

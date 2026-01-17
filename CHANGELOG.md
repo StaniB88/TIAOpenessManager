@@ -1,20 +1,27 @@
 # TIA Openness Manager - Changelog
 
-## v1.2.3 (2026-01-15)
+## v1.2.4 (2026-01-17)
 
 ### New Features
-- **Improved UI Responsiveness** - The application stays responsive during long operations
-- **Auto-Detect TIA Version** - No longer need to manually select TIA Portal version in settings
-- **Extended Attach Support** - Can now attach to TIA Portal (V15-V20)
-
-### Improvements
-- **Faster Import All** - Performance optimizations for large imports
-- **Better Safety Block Detection** - Improved recognition of Safety tag tables
-- **Cleaner About Window** - Simplified design
+- **Compare Files** - Added file comparison feature for exported projects (same-side comparison)
+- **Open Exported Project** - Left tree now supports opening exported project folders
 
 ### Bug Fixes
-- **Fixed Long Path Crash** - Protected against Windows MAX_PATH limitations
-- **Fixed Protection Errors** - Resolved path conflicts during protection operations
+- **Instance DB Import** - Fixed import errors ("Element cannot be found") when importing Instance DBs after SCL compilation
+
+### Improvements
+- **Compare Tab** - Removed auto-tab-jump behavior, added green highlight for Graphic tab selection
+
+---
+
+## v1.2.3 (2026-01-16)
+
+### Security
+- **Enhanced Clock Manipulation Detection** - Now detects both backward and forward system clock manipulation attempts
+- **Server-Time Validation** - Additional check compares local time against server expiry date to prevent bypass attempts
+
+### Improvements
+- **Installer: Extended TIA Version Check** - Installer now checks for TIA Portal V15-V20 (previously only V18-V20)
 
 ---
 

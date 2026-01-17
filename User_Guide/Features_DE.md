@@ -98,9 +98,9 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 
 | Version | Status |
 |---------|--------|
-| TIA Portal V15 | Nur Attach-Modus |
-| TIA Portal V16 | Nur Attach-Modus |
-| TIA Portal V17 | Nur Attach-Modus |
+| TIA Portal V15 | Vollständig unterstützt |
+| TIA Portal V16 | Vollständig unterstützt |
+| TIA Portal V17 | Vollständig unterstützt |
 | TIA Portal V18 | Vollständig unterstützt |
 | TIA Portal V19 | Vollständig unterstützt |
 | TIA Portal V20 | Vollständig unterstützt |
