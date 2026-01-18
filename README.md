@@ -3,7 +3,7 @@
 **Streamline Your Siemens TIA Portal Workflow**
 
 [![Website](https://img.shields.io/badge/Website-tiaopenessmanager.ch-blue)](https://tiaopenessmanager.ch/)
-[![Version](https://img.shields.io/badge/Version-1.2.4-green)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-1.2.5-green)](CHANGELOG.md)
 [![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V15--V20-orange)]()
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-lightgrey)]()
 
@@ -101,7 +101,7 @@ TIA Openness Manager is a powerful tool for Siemens TIA Portal developers that r
 
 4. Connect to your TIA Portal project (Open or Attach)
 
-**Free Trial:** New users get a 7-day trial with all features unlocked.
+**Free Trial:** New users get a 30-day trial with all features unlocked.
 
 
 ## Quick Start

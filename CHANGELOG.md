@@ -1,5 +1,26 @@
 # TIA Openness Manager - Changelog
 
+## v1.2.5 (2026-01-18)
+
+### Bug Fixes
+- **Instance DB Folder Placement** - Fixed Instance DBs landing in wrong folder during Import All
+  - Instance DBs now correctly placed in their original subfolder structure
+- **Folder Name Detection** - Improved detection of block folder names
+  - Now uses configured folder names from Settings instead of hardcoded fallbacks
+  - Supports projects with localized folder names (Program blocks, Programmbausteine, etc.)
+- **HMI Item Deletion** - Fixed "Delete" context menu for all HMI item types
+- **AML Import Performance** - Fixed performance issue where project tree was rebuilt after each file
+
+### Improvements
+- **Extended Trial Period** - Trial period increased from 7 days to 30 days
+- **Project Library Tree** - Added Project Library (Master Copies & Types) to tree building
+- **UI Tooltips** - Added helpful tooltips throughout the application:
+  - Preview Diff button: Clarifies that exported fingerprints are required
+  - Offline Folder path: Explains offline browsing mode
+  - And many more tooltips for better discoverability
+
+---
+
 ## v1.2.4 (2026-01-17)
 
 ### New Features

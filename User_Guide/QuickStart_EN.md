@@ -3,16 +3,16 @@
 ## System Requirements
 
 - **Operating System:** Windows 10/11 (64-bit)
-- **TIA Portal:** Version 15, 16, 17, 18, 19, or 20 installed
+- **TIA Portal:** Version 15, 16, 17, 18, 19, 20, or 21 installed
 - **.NET Framework:** 4.8 or higher
 - **Memory:** Minimum 4 GB RAM (8 GB recommended)
-- **Disk Space:** 50 MB for the application
+- **Disk Space:** 500 MB for the application
 
 ## Installation
 
 1. Extract the TiaOpennessManager archive to a folder of your choice
 2. Run `TiaOpennessManager.exe`
-3. On first launch, a 7-day trial license is automatically activated
+3. On first launch, a 30-day trial license is automatically activated
 
 > **Note:** TIA Portal must be installed but does not need to be running.
 
