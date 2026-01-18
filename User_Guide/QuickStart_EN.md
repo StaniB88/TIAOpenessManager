@@ -3,7 +3,7 @@
 ## System Requirements
 
 - **Operating System:** Windows 10/11 (64-bit)
-- **TIA Portal:** Version 15, 16, 17, 18, 19, 20, or 21 installed
+- **TIA Portal:** Version 15, 16, 17, 18, 19, or 20 installed
 - **.NET Framework:** 4.8 or higher
 - **Memory:** Minimum 4 GB RAM (8 GB recommended)
 - **Disk Space:** 500 MB for the application
