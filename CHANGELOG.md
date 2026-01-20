@@ -1,5 +1,25 @@
 # TIA Openness Manager - Changelog
 
+## v1.2.6 (2026-01-20)
+
+### New Features
+- **Per-Type Export Options** - Export settings (WithDefaults, WithReadOnly, None) now configurable separately for:
+  - Data Blocks (DBs)
+  - User Defined Types (UDTs)
+  - Tags
+  - Provides granular control over export behavior per element type
+
+### Improvements
+- **SCL Comment Normalization** - NormalizeWhitespace setting now also normalizes SCL source files
+  - Ensures exactly one space after `//` in VAR section comments
+  - Reduces Git diff noise from inconsistent comment formatting
+  - Only processes VAR/VAR_INPUT/VAR_OUTPUT/VAR_IN_OUT/VAR_TEMP sections (code comments unchanged)
+- **Uninstall License Cleanup** - Installer now prompts during uninstall whether to remove license data
+  - Choosing "No" preserves license activation for easy reinstallation
+  - Choosing "Yes" performs a clean removal including Trial and License registry keys
+
+---
+
 ## v1.2.5 (2026-01-18)
 
 ### Bug Fixes
