@@ -1,5 +1,22 @@
 # TIA Openness Manager - Changelog
 
+## v1.2.7 (2026-01-21)
+
+### Bug Fixes
+- **Protection Logic** - Fixed path-based protection matching to prevent false positives
+  - Removed name fallback that could incorrectly protect unrelated items with same name
+  - Protection now uses strict path-only matching
+- **Settings Persistence** - Fixed settings not being saved correctly
+- **Compare Window Format Matching** - Fixed file format mismatch in manual compare
+  - Left side (TIA export) now matches the format of the right side file (SCL↔SCL, XML↔XML, AWL↔AWL)
+  - Fixed issue where selecting an XML file would silently load SCL content if both existed
+
+### New Features
+- **Export Fingerprints Option** - New setting to toggle fingerprint extraction during export
+  - Disable to speed up exports when change detection is not needed
+
+---
+
 ## v1.2.6 (2026-01-20)
 
 ### New Features
