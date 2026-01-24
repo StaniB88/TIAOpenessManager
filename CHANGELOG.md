@@ -1,5 +1,13 @@
 # TIA Openness Manager - Changelog
 
+## v1.2.8 (2026-01-23)
+
+### New Features
+- **Protection Checkboxes for OBs** - AllowCodeUpdates and AllowAttributeUpdates options for protected Organization Blocks
+- **Browse Profiles Folder** - Button to open profiles folder for easy sharing
+
+---
+
 ## v1.2.7 (2026-01-21)
 
 ### Bug Fixes
