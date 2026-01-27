@@ -13,12 +13,15 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 - **Bulk Export** - Export hundreds of blocks with a single click
 - **Selective Export** - Choose exactly the blocks you need
 - **XML & SCL Support** - Full support for Simatic ML and SCL files
-- **SPL Export (V20+)** - Convert blocks to text-based source documents for better version control
+- **S7DCL Export (V20+)** - Convert blocks to text-based S7DCL format for better version control
+- **Per-Type Export Options** - Configure export settings (None/WithDefaults/WithReadOnly) separately for DBs, UDTs, and Tags
 - **Folder Structure Preservation** - TIA Portal folder structure is maintained
 - **Automatic Compilation** - Automatically compiles and saves after import
 - **Configurable Folder Names** - Customize export folder names (Source, Blocks, Tags, etc.)
 - **Optional Source Folder** - Enable/disable the Source folder wrapper in exports
 - **Version Control Options** - Clean exports for Git/SVN (normalize timestamps, remove metadata)
+- **Export Fingerprints** - Optional fingerprint extraction for change detection (Preview Diff)
+- **Fault Tolerant Import** - Continue importing even if some files fail
 
 ### HMI Export/Import
 
@@ -63,6 +66,7 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 
 - **Integrated Editor** - View and edit block code directly
 - **Syntax Highlighting** - For SCL, STL, and other languages
+- **Graphical View** - View LAD/FBD/GRAPH blocks graphically (requires SIMATIC Automation Compare Tool)
 - **Block Details** - Shows metadata like number, language, author
 - **Quick Navigation** - Search in project tree
 
@@ -70,8 +74,10 @@ The **TIA Openness Manager** is a powerful tool for Siemens TIA Portal developer
 
 - **Block Protection** - Protect important blocks from accidental overwriting
 - **Profiles** - Save and load protection configurations
-- **Visual Marking** - Protected blocks are clearly marked
+- **Visual Marking** - Protected blocks are clearly marked with lock icon
 - **Hierarchical Protection** - Protect entire folders or individual blocks
+- **OB Protection Options** - Additional checkboxes for OBs: Allow SCL code updates (C) and Allow Attribute updates (A)
+- **Browse Profiles Folder** - Quick access to profiles folder for sharing between team members
 
 ### Find Unused Blocks
 

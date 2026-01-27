@@ -11,7 +11,7 @@
 2. [Installation & Systemvoraussetzungen](#2-installation--systemvoraussetzungen)
 3. [Benutzeroberfläche](#3-benutzeroberfläche)
 4. [Projekt-Management](#4-projekt-management)
-5. [Import/Export Tab](#5-importexport-tab)
+5. [Import/Export/Compare Tab](#5-importexportcompare-tab)
 6. [Project Tab](#6-project-tab)
 7. [Protected Items Tab](#7-protected-items-tab)
 8. [MCP Tab (KI-Integration)](#8-mcp-tab-ki-integration)
@@ -70,18 +70,20 @@ Der TIA Openness Manager ist eine Desktop-Anwendung, die die Siemens TIA Portal 
 Die Anwendung ist in mehrere Bereiche unterteilt:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  [Open] [Attach] [Close]              [Settings] [License]  │
-├─────────────┬───────────────────────────────────────────────┤
-│             │  [Editor] [Import/Export] [Protected] [MCP]   │
-│  Projekt-   ├───────────────────────────────────────────────┤
-│  Baum       │                                               │
-│             │              Tab-Inhalt                       │
-│  (Links)    │                                               │
-│             │                                               │
-├─────────────┴───────────────────────────────────────────────┤
-│  Status-Leiste mit Fortschrittsanzeige                      │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────────┐
+│  [Browse] [Attach] [Archive] [Disconnect] [Rescan] [Save] [Compile] [Safety]   │
+├───────────────────────────────────────────────────────────────────────────────┤
+│                                        [Benutzerhandbuch] [About] [Settings]   │
+├─────────────┬─────────────────────────────────────────────────────────────────┤
+│             │  [Editor] [Import/Export/Compare] [Find Unused] [MCP] [Hardware] │
+│  Projekt-   ├─────────────────────────────────────────────────────────────────┤
+│  Baum       │                                                                 │
+│             │              Tab-Inhalt                                         │
+│  (Links)    │                                                                 │
+│             │                                                                 │
+├─────────────┴─────────────────────────────────────────────────────────────────┤
+│  Status-Leiste mit Fortschrittsanzeige                                        │
+└───────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Linker Bereich - Projektbaum
@@ -92,48 +94,47 @@ Die Anwendung ist in mehrere Bereiche unterteilt:
 
 ### Rechter Bereich - Tabs
 
-- **Project** - Code-Editor für ausgewählte Blöcke
-- **Import/Export** - Haupt-Arbeitsbereich für Datei-Operationen
+- **Editor** - Code-Editor für ausgewählte Blöcke
+- **Import/Export/Compare** - Haupt-Arbeitsbereich für Datei-Operationen
 - **Find Unused** - Dead-Code-Erkennung und Aufräumen
 - **MCP** - KI-Integrations-Status
 - **Hardware** - Geräteliste mit PROFINET-Namen und IP-Konfiguration
 
-### Symbolleiste
-
-| Symbol | Funktion |
-|--------|----------|
-| Open Project | Öffnet ein TIA Portal Projekt |
-| Attach to Portal | Verbindet mit laufendem TIA Portal |
-| Close | Schließt das aktuelle Projekt |
-| Settings | Öffnet die Einstellungen |
-| License | Zeigt Lizenz-Informationen |
-
----
-
 ## 4. Projekt-Management
 
-### Projekt öffnen (Headless Mode)
+### Toolbar Buttons
 
-1. Klicken Sie auf **Open Project**
+| Button | Funktion |
+|--------|----------|
+| **Browse...** | Projektdatei öffnen (Headless Mode) |
+| **Attach** | Mit laufender TIA Portal Instanz verbinden |
+| **Archive Project** | Komprimiertes Archiv (.zap) erstellen |
+| **Disconnect** | Aktuelle Projektverbindung trennen |
+| **Rescan PLC** | Projektbaum aktualisieren |
+| **Save** | Projekt speichern |
+| **Compile** | Projekt kompilieren |
+| **Safety Login** | Mit Safety-Anmeldedaten für F-Blöcke einloggen |
+
+### Browse (Headless Mode)
+
+1. Klicken Sie auf **Browse...**
 2. Navigieren Sie zu Ihrer TIA Portal Projektdatei (`.ap15`, `.ap16`, `.ap17`, `.ap18`, `.ap19`, `.ap20`, `.apx`)
 3. Klicken Sie auf **Öffnen**
 
 Die TIA Portal Version wird automatisch aus der Projektdatei-Erweiterung erkannt.
 
-Der Headless Mode startet TIA Portal im Hintergrund ohne sichtbare Benutzeroberfläche. Dies ist schneller für reine Export/Import-Operationen.
+Der Headless Mode startet TIA Portal im Hintergrund ohne sichtbare Benutzeroberfläche.
 
-### Mit TIA Portal verbinden (Attach Mode)
+### Attach (Mit laufendem TIA Portal verbinden)
 
-1. Öffnen Sie Ihr Projekt in TIA Portal
-2. Klicken Sie im TIA Openness Manager auf **Attach to Portal**
-3. Wählen Sie das gewünschte Projekt aus der Liste
+1. Öffnen Sie zuerst Ihr Projekt in TIA Portal
+2. Klicken Sie im TIA Openness Manager auf **Attach**
+3. Wählen Sie das gewünschte Projekt aus der Liste der laufenden TIA Portal Instanzen
 
 **Vorteile des Attach Mode:**
-- Schnellere Verbindung (kein Projekt-Laden)
+- Schnellere Verbindung (kein Projekt-Laden erforderlich)
 - Sie können gleichzeitig in TIA Portal arbeiten
-- Änderungen sind sofort sichtbar
-
-**Hinweis:** Bei großen Bulk-Operationen (25+ Dateien) wechselt die Anwendung automatisch in den Attach Mode für bessere Stabilität.
+- Änderungen sind sofort in beiden Anwendungen sichtbar
 
 ### Projekt archivieren
 
@@ -158,13 +159,13 @@ Generiert einen Safety-Dokumentations-Ausdruck für F-Blöcke:
 
 ### Projekt schließen
 
-Klicken Sie auf **Close**, um das Projekt zu schließen. Im Headless Mode wird TIA Portal beendet.
+Klicken Sie auf **Disconnect**, um die Projektverbindung zu trennen.
 
 ---
 
-## 5. Import/Export Tab
+## 5. Import/Export/Compare Tab
 
-Der Import/Export Tab ist das Herzstück der Anwendung.
+Der Import/Export/Compare Tab ist das Herzstück der Anwendung.
 
 ### Layout
 
@@ -184,7 +185,7 @@ Der Import/Export Tab ist das Herzstück der Anwendung.
 
 ### Right Directory (Export-/Import-Verzeichnis)
 
-Das Right Directory ist der Ordner auf Ihrem Dateisystem, in dem exportierte XML-Dateien gespeichert werden und aus dem Dateien importiert werden.
+Das Right Directory ist der Ordner auf Ihrem Dateisystem, in dem exportierte Dateien gespeichert werden und aus dem Dateien importiert werden.
 
 **Festlegen:**
 1. Klicken Sie auf **...** neben dem Feld "Right directory"
@@ -229,35 +230,52 @@ Diese Einstellungen steuern, wie Blöcke in Ihr TIA Portal Projekt importiert we
 
 | Option | Was es bewirkt |
 |--------|----------------|
-| **Ignore Structural Changes** | Importiert Blöcke auch wenn sich ihre interne Struktur seit dem letzten Export geändert hat. Nützlich wenn die Block-Schnittstelle gleich ist, aber die interne Implementierung abweicht. |
-| **Ignore Missing References** | Setzt den Import fort, wenn einige referenzierte Blöcke noch nicht im Projekt existieren. Hilfreich beim schrittweisen Import von Blöcken. |
-| **Fault Tolerant Import** | Wenn ein Block nicht importiert werden kann, wird mit dem Rest fortgefahren. Empfohlen für große Imports, um die erfolgreichen Imports zu maximieren. |
+| **IgnoreStructuralChanges** | Import erlauben, auch wenn sich die Blockstruktur geändert hat (z.B. Interface-Änderungen). Mit Vorsicht verwenden, da dies zu Laufzeitproblemen führen kann. |
+| **IgnoreMissingReferencedObjects** | Blöcke importieren, auch wenn referenzierte Objekte (aufgerufene Blöcke, UDTs) fehlen. Fehlende Referenzen müssen manuell aufgelöst werden. |
+| **Fault Tolerant (bei Fehlern fortfahren)** | Import verbleibender Dateien fortsetzen, auch wenn einige Dateien fehlschlagen. Ermöglicht Teil-Imports statt Abbruch beim ersten Fehler. |
 
-#### Export-Optionen
+#### Export-Optionen (Pro Typ)
 
-Diese Einstellungen steuern, wie Blöcke exportiert werden:
+Diese Einstellungen steuern, wie verschiedene Blocktypen exportiert werden. Jeder Typ kann separat konfiguriert werden:
+
+**Data Blocks (DBs):**
+| Option | Was es bewirkt |
+|--------|----------------|
+| **None** | DBs ohne Standardwerte oder schreibgeschützte Attribute exportieren |
+| **With Defaults** | Standardparameterwerte in DB-Exporte einschließen |
+| **With ReadOnly** | Schreibgeschützte Eigenschaften in DB-Exporte einschließen |
+
+**User Defined Types (UDTs):**
+| Option | Was es bewirkt |
+|--------|----------------|
+| **None** | UDTs ohne Standardwerte oder schreibgeschützte Attribute exportieren |
+| **With Defaults** | Standardparameterwerte in UDT-Exporte einschließen |
+| **With ReadOnly** | Schreibgeschützte Eigenschaften in UDT-Exporte einschließen |
+
+**Tags:**
+| Option | Was es bewirkt |
+|--------|----------------|
+| **None** | Variablentabellen ohne Standardwerte oder schreibgeschützte Attribute exportieren |
+| **With Defaults** | Standardwerte in Variablentabellen-Exporte einschließen |
+| **With ReadOnly** | Schreibgeschützte Eigenschaften in Variablentabellen-Exporte einschließen |
+
+#### Zusätzlicher S7DCL Export (nur V20+)
+
+S7DCL-Dateien sind textbasierte Quelldokumente, die einfacher zu lesen und zu vergleichen sind als XML. Sie bieten bessere Lesbarkeit für Versionskontrolle und Code-Reviews.
 
 | Option | Was es bewirkt |
 |--------|----------------|
-| **Export With Defaults** | Standardparameterwerte in den exportierten Dateien einschließen. Nützlich für vollständige Dokumentation. |
-| **Export With ReadOnly** | Schreibgeschützte Eigenschaften in Exporte einschließen. |
+| **SCL + S7DCL** | SCL-Blöcke zusätzlich als S7DCL-Format (.s7dcl) neben .scl und .xml exportieren. Erfordert TIA Portal V20+. |
+| **AWL + S7DCL** | AWL/STL-Blöcke zusätzlich als S7DCL-Format (.s7dcl) neben .awl und .xml exportieren. Erfordert TIA Portal V20+. |
+| **LAD/FBD + S7DCL** | LAD/FBD/GRAPH-Blöcke zusätzlich als S7DCL-Format (.s7dcl) neben .xml exportieren. Ermöglicht Text-Export für grafische Sprachen. Erfordert TIA Portal V20+. |
 
-#### SPL Export-Optionen (nur V20 und später)
-
-SPL (SIMATIC Programming Language) Dateien sind textbasierte Quelldokumente, die einfacher zu lesen und zu vergleichen sind als XML.
-
-| Option | Was es bewirkt |
-|--------|----------------|
-| **Export SCL As SPL** | SCL-Blöcke als textbasierte Quelldokumente (`.spl` Dateien) speichern |
-| **Export AWL As SPL** | AWL/STL-Blöcke als textbasierte Quelldokumente speichern |
-| **Export LAD/FBD As SPL** | Grafische Programmierblöcke (LAD, FBD, GRAPH) als textbasierte Dokumente speichern |
-
-**Warum SPL Export verwenden?**
-- **Bessere Lesbarkeit** - SPL-Dateien sind reiner Text, leicht lesbar in jedem Text-Editor
+**Warum S7DCL Export verwenden?**
+- **Bessere Lesbarkeit** - S7DCL-Dateien sind reiner Text, ideal für Diff-Vergleiche
 - **Versionskontrolle** - Sehen Sie genau, was sich zwischen Versionen in Git oder SVN geändert hat
 - **Code-Review** - Einfacher, Änderungen Zeile für Zeile zu überprüfen
+- **Grafische Sprachen** - Textbasierte Darstellung von LAD/FBD-Blöcken erhalten
 
-> **Hinweis:** SPL-Dateien dienen nur zur Ansicht und Versionskontrolle. Sie können nicht zurück in TIA Portal importiert werden. Diese Option erfordert TIA Portal V20 oder später.
+> **Hinweis:** S7DCL-Dateien dienen nur zur Ansicht und Versionskontrolle. Sie können nicht zurück in TIA Portal importiert werden. Diese Option erfordert TIA Portal V20 oder später.
 
 #### Versionskontroll-Optionen
 
@@ -265,18 +283,25 @@ Diese Einstellungen helfen, sauberere Exporte für Git, SVN oder andere Versions
 
 | Option | Was es bewirkt |
 |--------|----------------|
-| **Exclude Document Info** | Metadaten entfernen, die sich bei jedem Export ändern |
-| **Normalize Timestamps** | Alle Datumsangaben auf einen festen Wert setzen (1. Januar 2000), damit unveränderte Blöcke keine Unterschiede zeigen |
-| **Clear Installed Products** | Maschinenspezifische Informationen aus Exporten entfernen |
-| **Remove Object List** | Interne Tracking-Daten aus Code-Blöcken entfernen |
-| **Normalize Whitespace** | Konsistente Textformatierung sicherstellen |
+| **Exclude Document Info (empfohlen)** | Verwendet TIA Portal API DocumentInfoOptions.None um Timestamps und InstalledProducts aus Exporten auszuschließen. Standardmäßig aktiviert für saubere Versionskontroll-Diffs. |
+| **Normalize Timestamps** | Alle Datumsangaben auf 2000-01-01 setzen, um Git-Diff-Rauschen zu reduzieren |
+| **Clear Installed Products** | Maschinenspezifische Produktversionsinformationen aus Exporten entfernen |
+| **Remove Object List** | ObjectList für Code-Blöcke mit Quelldateien (.scl, .awl, .db) entfernen |
+| **Normalize Whitespace** | Leerzeichen in MultiLanguageText-Elementen trimmen |
+| **Export Fingerprints** | Wenn aktiviert, werden Fingerprints für Änderungserkennung extrahiert und gespeichert. Deaktivieren um Fingerprint-Extraktion beim Export zu überspringen (beschleunigt Export wenn Änderungserkennung nicht benötigt wird). |
 
-> **Tipp:** Wenn Sie Git oder SVN verwenden, aktivieren Sie alle Versionskontroll-Optionen. Dies verhindert "falsche Änderungen", bei denen Dateien unterschiedlich aussehen, obwohl sich der tatsächliche Code nicht geändert hat.
+> **Tipp:** Wenn Sie Git oder SVN verwenden, aktivieren Sie alle Versionskontroll-Optionen außer "Export Fingerprints" wenn Sie die Preview Diff Funktion nicht benötigen. Dies verhindert "falsche Änderungen", bei denen Dateien unterschiedlich aussehen, obwohl sich der tatsächliche Code nicht geändert hat.
 
 ### Preview Diff
 
 Die Preview Diff Funktion zeigt Unterschiede zwischen dem TIA Portal Projekt und dem Working Directory:
 
+**Voraussetzungen:**
+- Sie müssen zuvor Blöcke mit aktivierter Option **Export Fingerprints** exportiert haben
+- Diese Option finden Sie im **Import/Export-Einstellungen** Dialog (Zahnrad-Symbol ⚙) unter **Versionskontroll-Optionen**
+- Ohne exportierte Fingerprints kann Preview Diff keine Änderungen erkennen
+
+**Verwendung:**
 1. Klicken Sie auf **Preview Diff**
 2. Die Anwendung vergleicht Fingerprints (Hashes) der Blöcke
 3. Ein Fenster zeigt:
@@ -284,28 +309,31 @@ Die Preview Diff Funktion zeigt Unterschiede zwischen dem TIA Portal Projekt und
    - **Neu in TIA** - Blöcke, die nur im Projekt existieren
    - **Gelöscht** - Blöcke, die nur im Working Directory existieren
 
+> **Tipp:** Wenn Sie die Preview Diff Funktion nicht benötigen, können Sie "Export Fingerprints" in den Import/Export-Einstellungen deaktivieren um Exporte zu beschleunigen.
+
 ### Compare (Manueller Vergleich)
 
-Die Compare-Funktion ermöglicht einen detaillierten Zeilenvergleich zwischen einem TIA Portal Block und einer beliebigen XML-Datei.
+Die Compare-Funktion ermöglicht einen detaillierten Zeilenvergleich zwischen beliebigen zwei Elementen - Blöcke, Dateien oder jede Kombination.
 
 **So verwenden Sie den manuellen Vergleich:**
 
-1. Wählen Sie einen Block im linken Baum (TIA Projekt)
-2. Wählen Sie eine XML-Datei im rechten Baum (Working Directory)
+1. Wählen Sie ein Element im linken Baum (TIA Projekt Block oder exportierte Datei)
+2. Wählen Sie ein Element im rechten Baum (Working Directory Datei oder TIA Block)
 3. Klicken Sie auf **Compare**
 4. Das Compare-Fenster öffnet sich und zeigt:
-   - **Links (TIA Portal):** Name des ausgewählten Blocks
-   - **Rechts (Dateisystem):** Name der ausgewählten Datei
+   - **Links:** Name des ausgewählten linken Elements
+   - **Rechts:** Name des ausgewählten rechten Elements
 5. Klicken Sie auf **Vergleich starten**
 6. Der Diff-Viewer zeigt die Unterschiede Zeile für Zeile
 
-**Vorteile des manuellen Vergleichs:**
+**Cross-Vergleich Feature:**
 
-- **Freie Zuordnung** - Vergleichen Sie beliebige Blöcke mit beliebigen Dateien, unabhängig vom Namen
+- **Alles-mit-Allem** - Vergleichen Sie alles mit allem: Block↔Datei, Datei↔Datei, Block↔Block
+- **Format-Matching** - Der Vergleich passt automatisch die Formate an (SCL↔SCL, XML↔XML, AWL↔AWL)
+- **Freie Zuordnung** - Vergleichen Sie beliebige Elemente miteinander, unabhängig von Name oder Typ
 - **Schneller Einzelvergleich** - Ideal für gezielte Überprüfungen ohne alle Dateien zu scannen
-- **SCL-Unterstützung** - Falls verfügbar, wird automatisch die besser lesbare SCL-Datei verwendet
 
-**Hinweis:** Im Gegensatz zu Preview Diff (Hash-basiert) führt Compare einen direkten Textvergleich durch. Der Block wird temporär exportiert und Zeile für Zeile mit der Datei verglichen.
+**Hinweis:** Im Gegensatz zu Preview Diff (Hash-basiert) führt Compare einen direkten Textvergleich durch. Blöcke werden temporär im passenden Format exportiert und Zeile für Zeile verglichen.
 
 ### HMI Export/Import
 
@@ -341,7 +369,7 @@ Hardware-Konfiguration als AML/XML exportieren:
 
 ---
 
-## 6. Project Tab
+## 6. Editor Tab
 
 ### Code-Anzeige
 
@@ -351,6 +379,23 @@ Wenn Sie einen Block im Projektbaum auswählen, wird sein Quellcode im Code-Edit
 - SCL (Structured Control Language)
 - STL (Statement List)
 - LAD/FBD (als XML-Darstellung)
+
+### Code und Graphical Tabs
+
+Der Editor hat zwei Tabs:
+
+**Code Tab:**
+- Zeigt textbasierten Quellcode (SCL, STL, AWL)
+- Syntax-Highlighting für bessere Lesbarkeit
+- Suchfunktion mit Optionen für Groß-/Kleinschreibung und Ganze Wörter
+
+**Graphical Tab:**
+- Zeigt LAD/FBD/GRAPH-Blöcke grafisch an
+- **Voraussetzung:** SIMATIC Automation Compare Tool (SIMATIC ACT) muss installiert sein
+- Klicken Sie auf "Open in SIMATIC ACT" oder wechseln Sie zum Graphical Tab um den Block anzuzeigen
+- Wenn SIMATIC ACT nicht installiert ist, ist die grafische Ansicht nicht verfügbar
+
+> **Hinweis:** Das SIMATIC Automation Compare Tool ist ein kostenloses Tool von Siemens, das von der Siemens Support-Website heruntergeladen werden kann.
 
 ### Block-Details Panel
 
@@ -374,7 +419,7 @@ Nutzen Sie das Suchfeld über dem Projektbaum, um Blöcke schnell zu finden:
 
 ### Konzept
 
-Das Schutz-System verhindert, dass wichtige Blöcke versehentlich überschrieben werden.
+Das Schutz-System verhindert, dass wichtige Blöcke während Import-Operationen versehentlich überschrieben werden.
 
 ### Blöcke schützen
 
@@ -384,8 +429,25 @@ Das Schutz-System verhindert, dass wichtige Blöcke versehentlich überschrieben
 
 Geschützte Blöcke werden:
 - Beim Import übersprungen
-- Mit einem Schloss-Symbol markiert
+- Mit einem Schloss-Symbol (🔒) markiert
 - In der Schutzliste angezeigt
+
+### Schutz-Optionen für Organisation Blocks (OBs)
+
+Wenn Sie einen OB (Organization Block) schützen, erscheinen zusätzliche Checkboxen daneben:
+
+| Checkbox | Symbol | Was es bewirkt |
+|----------|--------|----------------|
+| **Allow SCL code updates** | C | Wenn aktiviert, können SCL-Quelltextänderungen dieses geschützten OBs beim Import aktualisiert werden, während andere Attribute geschützt bleiben. |
+| **Allow Attribute updates** | A | Wenn aktiviert, können Block-Attribute (Kommentare, Titel, etc.) beim Import aktualisiert werden, während der eigentliche Code geschützt bleibt. |
+
+**Anwendungsfälle:**
+- **Beide deaktiviert:** Vollständiger Schutz - Block wird beim Import komplett übersprungen
+- **Nur C aktiviert:** Code-Updates importieren, aber Original-Attribute behalten
+- **Nur A aktiviert:** Attribut-Änderungen importieren, aber Original-Code behalten
+- **Beide aktiviert:** Vollständige Updates erlauben (entspricht keinem Schutz)
+
+> **Hinweis:** Diese zusätzlichen Checkboxen werden nur für geschützte OBs angezeigt. FBs, FCs und DBs verwenden den standardmäßigen vollständigen Schutz.
 
 ### Profile
 
@@ -400,29 +462,64 @@ Profile speichern Ihre Schutz-Konfiguration:
 1. Klicken Sie auf **Load Profile**
 2. Wählen Sie ein gespeichertes Profil
 
+**Profile-Ordner öffnen:**
+- Klicken Sie auf das Ordner-Symbol um den Profile-Ordner im Explorer zu öffnen
+- Nützlich um Profile zwischen Rechnern oder Team-Mitgliedern zu teilen
+
 ---
 
 ## 8. MCP Tab (KI-Integration)
 
 ### Was ist MCP?
 
-Das Model Context Protocol (MCP) ermöglicht KI-Assistenten, auf Ihr TIA Portal Projekt zuzugreifen.
+Das Model Context Protocol (MCP) ermöglicht KI-Assistenten, auf Ihr TIA Portal Projekt zuzugreifen. Wenn aktiv, können KI-Clients Blöcke auflisten, Code lesen, Dateien exportieren/importieren und Analysen durchführen.
 
 ### MCP Server Status
 
 Der Tab zeigt:
 - **Server Status:** Running / Stopped
-- **Verbundene Clients:** Anzahl aktiver Verbindungen
-- **Verfügbare Tools:** Liste der MCP-Funktionen
+- **Connection Settings** Button zur Server-Konfiguration
+
+### Connection Settings
+
+Klicken Sie auf **Connection Settings** um den MCP Connection Info Dialog zu öffnen:
+
+**Server Connection:**
+- **Named Pipe:** `\\.\pipe\TiaOpennessMcp` - Die Verbindungsadresse für MCP-Clients
+- **Status:** Zeigt ob der Server läuft oder gestoppt ist
+- **Available Tools:** Anzahl der verfügbaren MCP-Tools (z.B. 23 tools)
+
+**Security Settings:**
+| Option | Beschreibung |
+|--------|--------------|
+| **Allow Write Operations** | Import, Delete, Compile, Save Operationen via MCP erlauben |
+| **Require User Approval** | Wenn aktiviert, erscheint für jede Schreiboperation ein Bestätigungsdialog |
+
+**Client Configuration Tabs:**
+Der Dialog bietet fertige Konfigurationen für verschiedene KI-Clients:
+- **LM Studio** - Konfiguration für LM Studio MCP-Einstellungen
+- **Ollama** - Konfiguration für Ollama
+- **Continue.dev** - Konfiguration für Continue.dev Extension
+- **Claude Desktop** - Konfiguration für Claude Desktop App
+
+Jeder Tab zeigt:
+- Die JSON-Konfiguration zum Hinzufügen in Ihren Client
+- Einen **Copy Config** Button zum Kopieren der Konfiguration
+- Schritt-für-Schritt Setup-Anleitung
 
 ### Verwendung mit KI-Assistenten
 
-1. Starten Sie den MCP Server im TIA Openness Manager
-2. Konfigurieren Sie Ihren KI-Assistenten mit der MCP-Server-Adresse
-3. Der KI-Assistent kann nun:
+1. Öffnen Sie ein TIA Portal Projekt im TIA Openness Manager
+2. Gehen Sie zum **MCP** Tab
+3. Klicken Sie auf **Connection Settings**
+4. Wählen Sie Ihren KI-Client Tab (z.B. Claude Desktop)
+5. Klicken Sie auf **Copy Config** und fügen Sie es in die MCP-Einstellungen Ihres Clients ein
+6. Starten Sie Ihren KI-Client neu
+7. Der KI-Assistent kann nun:
    - Projektstruktur abfragen
-   - Block-Code lesen
-   - Analysen durchführen
+   - Block-Code lesen und analysieren
+   - Dateien exportieren/importieren (wenn Schreiboperationen aktiviert)
+   - Code für Ihr Projekt generieren
 
 ---
 

@@ -13,12 +13,15 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 - **Bulk Export** - Exportieren Sie hunderte Blöcke mit einem Klick
 - **Selektiver Export** - Wählen Sie genau die Blöcke, die Sie benötigen
 - **XML & SCL Support** - Vollständige Unterstützung für Simatic ML und SCL-Dateien
-- **SPL Export (V20+)** - Blöcke in textbasierte Quelldokumente konvertieren für bessere Versionskontrolle
+- **S7DCL Export (V20+)** - Blöcke in textbasiertes S7DCL-Format konvertieren für bessere Versionskontrolle
+- **Pro-Typ Export-Optionen** - Export-Einstellungen (None/WithDefaults/WithReadOnly) separat für DBs, UDTs und Tags konfigurieren
 - **Ordnerstruktur-Erhaltung** - Die TIA Portal Ordnerstruktur wird beibehalten
 - **Automatische Kompilierung** - Kompiliert und speichert automatisch nach Import
 - **Konfigurierbare Ordnernamen** - Passen Sie Export-Ordnernamen an (Source, Blocks, Tags, etc.)
 - **Optionaler Source-Ordner** - Source-Ordner im Export aktivieren/deaktivieren
 - **Versionskontroll-Optionen** - Saubere Exports für Git/SVN (Timestamps normalisieren, Metadaten entfernen)
+- **Export Fingerprints** - Optionale Fingerprint-Extraktion für Änderungserkennung (Preview Diff)
+- **Fault Tolerant Import** - Import fortsetzen auch wenn einzelne Dateien fehlschlagen
 
 ### HMI Export/Import
 
@@ -63,6 +66,7 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 
 - **Integrierter Editor** - Betrachten und bearbeiten Sie Blockcode direkt
 - **Syntax-Highlighting** - Für SCL, STL und andere Sprachen
+- **Grafische Ansicht** - LAD/FBD/GRAPH-Blöcke grafisch anzeigen (erfordert SIMATIC Automation Compare Tool)
 - **Block-Details** - Zeigt Metadaten wie Nummer, Sprache, Autor
 - **Schnelle Navigation** - Suche im Projektbaum
 
@@ -70,8 +74,10 @@ Der **TIA Openness Manager** ist ein leistungsstarkes Werkzeug für Siemens TIA 
 
 - **Block-Schutz** - Schützen Sie wichtige Blöcke vor versehentlichem Überschreiben
 - **Profile** - Speichern und laden Sie Schutz-Konfigurationen
-- **Visuelle Markierung** - Geschützte Blöcke sind klar gekennzeichnet
+- **Visuelle Markierung** - Geschützte Blöcke sind klar mit Schloss-Symbol gekennzeichnet
 - **Hierarchischer Schutz** - Schützen Sie ganze Ordner oder einzelne Blöcke
+- **OB-Schutz-Optionen** - Zusätzliche Checkboxen für OBs: Allow SCL code updates (C) und Allow Attribute updates (A)
+- **Profile-Ordner öffnen** - Schnellzugriff auf Profile-Ordner zum Teilen zwischen Team-Mitgliedern
 
 ### Find Unused Blocks
 
