@@ -1,5 +1,18 @@
 # TIA Openness Manager - Changelog
 
+## v1.2.9 (2026-01-27)
+
+### New Features
+- **User Guide Button** - Added "User Guide" button in toolbar to open built-in documentation
+- **Indeterminate Progress Bar** - Progress bar now shows marquee animation during Browse/Attach until project tree is fully loaded
+
+### Bug Fixes
+- **Language Change Crash** - Fixed application crash when changing language in Settings
+- **Tooltip Correction** - Fixed TIA Project tooltip referencing non-existent "Open Project" button (now "Browse")
+- **Project Path Behavior** - TIA Project path no longer persists between sessions; shows only currently connected project
+
+---
+
 ## v1.2.8 (2026-01-23)
 
 ### New Features
