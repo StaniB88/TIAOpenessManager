@@ -692,9 +692,9 @@ Bei aktiviertem Debug Logging werden detaillierte Logs erstellt:
 
 ### Lizenz-Tiers
 
-| Feature | Basic (GRATIS) | Pro (€25/Mo) | Enterprise (€40/Mo) |
-|---------|----------------|--------------|---------------------|
-| Preis | Kostenlos | €25/Mo oder €250/Jahr | €40/Mo oder €400/Jahr |
+| Feature | Basic (GRATIS) | Pro (CHF 9.99/Mo) | Enterprise (CHF 29.99/Mo) |
+|---------|----------------|---------------------|---------------------------|
+| Preis | Kostenlos | CHF 9.99/Mo oder CHF 99.99/Jahr | CHF 29.99/Mo oder CHF 299.99/Jahr |
 | Dateien | 1 | 1.000 | Unbegrenzt |
 | Export/Import | Ja | Ja | Ja |
 | Block Compare | Ja | Ja | Ja |

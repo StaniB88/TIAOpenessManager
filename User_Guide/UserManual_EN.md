@@ -692,9 +692,9 @@ When Debug Logging is enabled, detailed logs are created:
 
 ### License Tiers
 
-| Feature | Basic (FREE) | Pro (€25/mo) | Enterprise (€40/mo) |
-|---------|--------------|--------------|---------------------|
-| Price | Free forever | €25/mo or €250/year | €40/mo or €400/year |
+| Feature | Basic (FREE) | Pro (CHF 9.99/mo) | Enterprise (CHF 29.99/mo) |
+|---------|--------------|---------------------|---------------------------|
+| Price | Free forever | CHF 9.99/mo or CHF 99.99/year | CHF 29.99/mo or CHF 299.99/year |
 | Files | 1 | 1,000 | Unlimited |
 | Export/Import | Yes | Yes | Yes |
 | Block Compare | Yes | Yes | Yes |
